@@ -24,5 +24,6 @@ A web application that helps you optimize your household device usage schedule b
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/SmartEnergySchedule.git
+git clone https://github.com/gkamarinopoulos/SmartEnergySchedule.git
+
 cd SmartEnergySchedule
