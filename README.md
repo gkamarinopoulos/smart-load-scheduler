@@ -22,7 +22,7 @@ A web application that helps you optimize your household device usage schedule b
 ### 🌐 Live App
 
 👉 You can access the app here:  
-[https://gkamarinopoulos-smartenergyschedule.streamlit.app](https://gkamarinopoulos-smartenergyschedule.streamlit.app)
+[https://gkamarinopoulos-smartenergyschedule.streamlit.app](https://gkamarinopoulos-smart-energy-schedule.streamlit.app/)
 
 ---
 
