@@ -17,6 +17,12 @@ A web application that helps you optimize your household device usage schedule b
 - [Streamlit](https://streamlit.io/)
 - [Pandas](https://pandas.pydata.org/)
 - [Matplotlib](https://matplotlib.org/)
+---
+
+### 🌐 Live App
+
+👉 You can access the app here:  
+[https://gkamarinopoulos-smartenergyschedule.streamlit.app](https://gkamarinopoulos-smartenergyschedule.streamlit.app)
 
 ---
 
