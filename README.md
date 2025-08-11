@@ -1,35 +1,63 @@
 # ⚡ Smart Load Scheduler
 
-A web application that helps you optimize your household device usage schedule based on your electricity provider's tariffs and your device priorities.
-
-### ✅ Features
-- Dynamic schedule calculation for daily device usage
-- Custom device input with editable power and operating time
-- Priority-based scheduling within specified time windows
-- Maximum power constraint (default 3.5 kW)
-- Hourly power and cost visualization
-- Export schedule to CSV
-- Responsive layout for desktop
+A **Streamlit** web app that builds an **optimal daily schedule** for your household devices, minimizing electricity cost based on your provider’s hourly tariffs, device time windows, and priorities.
 
 ---
 
-### 💻 Built With
+## ✅ Features
+- **Provider tariffs** (GR): ΔΕΗ, ΗΡΩΝ, Elpedison, Protergia (preloaded hourly prices).
+- **Clean UX**: sidebar preview chart of the day’s tariff, tabs for a tidy workflow.
+- **Device management**
+  - **➕ Add Device**: predefined or custom device, power (kW), operating hours, earliest start, latest end, priority.
+  - **📋 Device List**: inline editing & quick clear.
+  - **📅 Scheduling**: calculates a day plan obeying constraints.
+- **Priority-based scheduling**
+  - Priority **1** devices are guaranteed (may force schedule if needed).
+  - Lower priorities fill cheapest/available slots.
+- **Constraints**
+  - Time windows per device.
+  - **Max total power** cap (default **3.5 kW**).
+- **Visualizations**
+  - Hourly **Power (kW)** bar chart.
+  - Hourly **Cost (€)** bar chart.
+  - Sidebar mini **tariff** chart.
+- **Export**: download the schedule as **CSV**.
+- **Responsive layout** with forms/expanders (advanced options stay out of the way).
+
+---
+
+## 🌐 Live App
+👉 https://gkamarinopoulos-smartenergyschedule.streamlit.app
+
+---
+
+## 🛠️ Tech Stack
 - [Streamlit](https://streamlit.io/)
 - [Pandas](https://pandas.pydata.org/)
 - [Matplotlib](https://matplotlib.org/)
----
-
-### 🌐 Live App
-
-👉 You can access the app here:  
-[https://gkamarinopoulos-smartenergyschedule.streamlit.app](https://gkamarinopoulos-smart-energy-schedule.streamlit.app/)
 
 ---
 
-### 🚀 Run Locally
+## 🚀 Run Locally
 
-1. Clone the repository:
+> **Requires** Python 3.10+ (tested on 3.11)
+
 ```bash
+# 1) Clone
 git clone https://github.com/gkamarinopoulos/SmartEnergySchedule.git
-
 cd SmartEnergySchedule
+
+# 2) (Recommended) Create & activate a virtual env
+python -m venv .venv
+# Windows:
+. .venv/Scripts/activate
+# macOS/Linux:
+# source .venv/bin/activate
+
+# 3) Install dependencies
+pip install -r requirements.txt
+# or:
+# pip install streamlit pandas matplotlib
+
+# 4) Run
+streamlit run main.py
