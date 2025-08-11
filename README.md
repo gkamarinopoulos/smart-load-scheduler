@@ -38,24 +38,27 @@ A **Streamlit** web app that builds an **optimal daily schedule** for your house
 
 ---
 
-🚀 Run Locally
+## 🚀 Run Locally
 Requires Python 3.10+ (tested on 3.11)
 
-# 1) Clone
+1) Clone
 git clone https://github.com/gkamarinopoulos/smart-load-scheduler.git
 cd smart-load-scheduler
 
-# 2) (Recommended) Create & activate a virtual env
+2) (Recommended) Create & activate a virtual env
 python -m venv .venv
-# Windows:
-. .venv/Scripts/activate
-# macOS/Linux:
-# source .venv/bin/activate
 
-# 3) Install dependencies
+Windows:
+.venv\Scripts\activate
+
+macOS / Linux:
+source .venv/bin/activate
+
+3) Install dependencies
 pip install -r requirements.txt
-# or:
-# pip install streamlit pandas matplotlib
+or:
+pip install streamlit pandas matplotlib
 
-# 4) Run
+4) Run
 streamlit run main.py
+
