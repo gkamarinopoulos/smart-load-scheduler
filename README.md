@@ -38,14 +38,12 @@ A **Streamlit** web app that builds an **optimal daily schedule** for your house
 
 ---
 
-## 🚀 Run Locally
+🚀 Run Locally
+Requires Python 3.10+ (tested on 3.11)
 
-> **Requires** Python 3.10+ (tested on 3.11)
-
-```bash
 # 1) Clone
-git clone https://github.com/gkamarinopoulos/SmartEnergySchedule.git
-cd SmartEnergySchedule
+git clone https://github.com/gkamarinopoulos/smart-load-scheduler.git
+cd smart-load-scheduler
 
 # 2) (Recommended) Create & activate a virtual env
 python -m venv .venv
