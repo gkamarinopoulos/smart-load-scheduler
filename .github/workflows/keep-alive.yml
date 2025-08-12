@@ -1,14 +1,23 @@
-name: Keep Render App Alive
+name: Keep Render App Alive (Puppeteer)
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # Κάθε 5 λεπτά
-  workflow_dispatch:        # Να μπορείς να το τρέχεις και χειροκίνητα
+    - cron: "*/5 * * * *"   # κάθε 5 λεπτά
+  workflow_dispatch:
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Render App
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install Puppeteer
         run: |
-          curl -s -o /dev/null -w "%{http_code}" https://smart-load-scheduler.onrender.com
+          npm init -y
+          npm install puppeteer
+      - name: Visit app with headless Chrome
+        env:
+          APP_URL: https://smart-load-scheduler.onrender.com
+        run: node scripts/keep-alive.js
