@@ -28,7 +28,7 @@ A **Streamlit** web app that builds an **optimal daily schedule** for your house
 
 ## 🌐 Live App
 👉 https://smart-load-scheduler.onrender.com
-)
+
 
 ---
 
