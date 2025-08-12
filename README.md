@@ -27,7 +27,8 @@ A **Streamlit** web app that builds an **optimal daily schedule** for your house
 ---
 
 ## 🌐 Live App
-👉 https://gkamarinopoulos-smart-energy-schedule.streamlit.app/
+👉 https://smart-load-scheduler.onrender.com
+)
 
 ---
 
