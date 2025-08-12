@@ -2,7 +2,7 @@ name: Keep Render App Alive (Puppeteer)
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # κάθε 5 λεπτά
+    - cron: "*/5 * * * *"   # κάθε 5'
   workflow_dispatch:
 
 jobs:
@@ -13,10 +13,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+
+      - name: Install Chromium dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libatk-bridge2.0-0 libatk1.0-0 libx11-xcb1 libxcomposite1 libxcursor1 \
+            libxdamage1 libxi6 libxtst6 libnss3 libxrandr2 libasound2 \
+            libpangocairo-1.0-0 libpango-1.0-0 libcups2 libxss1 libxshmfence1 \
+            libdrm2 libgbm1 libxfixes3 libxkbcommon0 fonts-liberation
+
       - name: Install Puppeteer
         run: |
           npm init -y
           npm install puppeteer
+
       - name: Visit app with headless Chrome
         env:
           APP_URL: https://smart-load-scheduler.onrender.com
