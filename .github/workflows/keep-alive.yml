@@ -1,0 +1,14 @@
+name: Keep Render App Alive
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # Κάθε 5 λεπτά
+  workflow_dispatch:        # Να μπορείς να το τρέχεις και χειροκίνητα
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render App
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" https://smart-load-scheduler.onrender.com
